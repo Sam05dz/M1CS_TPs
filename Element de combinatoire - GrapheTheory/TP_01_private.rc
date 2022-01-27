@@ -1,0 +1,35 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 1,0,2,4
+PRODUCTVERSION 1,0,2,4
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "040C04E4"
+    {
+      VALUE "CompanyName", "Master1 CS"
+      VALUE "FileVersion", "1.0.2.4"
+      VALUE "FileDescription", "Developed using the Dev-C++ IDE"
+      VALUE "InternalName", "Element Combinatoire - Théorie des Graphes"
+      VALUE "LegalCopyright", "Houssam HAMOUDA 2022"
+      VALUE "LegalTrademarks", "Houssam HAMOUDA 2022"
+      VALUE "OriginalFilename", "Element Combinatoire - Théorie des Graphes"
+      VALUE "ProductName", "Tp Element Combinatoire - Théorie des Graphes"
+      VALUE "ProductVersion", "1.0.2.4"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x040C, 1252
+  }
+}

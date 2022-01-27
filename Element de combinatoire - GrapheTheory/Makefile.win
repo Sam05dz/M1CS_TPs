@@ -1,0 +1,36 @@
+# Project: Element_Combinatoire
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = TP_01_private.res
+OBJ      = Graphe.o Application.o $(RES)
+LINKOBJ  = Graphe.o Application.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -pg -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Element_Combinatoire.exe
+CXXFLAGS = $(CXXINCS) -m32 -pg -g3
+CFLAGS   = $(INCS) -m32 -pg -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Graphe.o: Graphe.cpp
+	$(CPP) -c Graphe.cpp -o Graphe.o $(CXXFLAGS)
+
+Application.o: Application.cpp
+	$(CPP) -c Application.cpp -o Application.o $(CXXFLAGS)
+
+TP_01_private.res: TP_01_private.rc 
+	$(WINDRES) -i TP_01_private.rc -F pe-i386 --input-format=rc -o TP_01_private.res -O coff 
+
